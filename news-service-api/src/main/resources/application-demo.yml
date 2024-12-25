@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: news-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://news-db:5432/news_system
+  liquibase:
+    change-log: db.changelog/changelog-master.xml
+    enabled: true
+    contexts: dev
+  jpa:
+    generate-ddl: false
+    show-sql: true
+
+server:
+  port: 8081
